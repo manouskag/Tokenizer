@@ -64,7 +64,7 @@ HF_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxx
 ### To create a new token in Hugging Face (HF_TOKEN)
 --> after login 
 --> click profile icon, select settings
---> NAvigate to Tokens, Access Tokens tab
+--> Navigate to Tokens, Access Tokens tab
 --> Create new token with permission to write, save
 
 uv run python scripts\push_to_hub.py --tokenizer-dir artifacts\medical-bpe-pubmed-hf --repo-id YOUR_USERNAME/medical-bpe-16k
