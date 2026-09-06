@@ -1,14 +1,14 @@
 
 
 ### Step 1 — Download corpora
-# 50k PubMed abstracts from HuggingFace Hub (streams Parquet, ~180 MB)
+50k PubMed abstracts from HuggingFace Hub (streams Parquet, ~180 MB)
 uv run python scripts\download_pubmed_sample.py --max-docs 50000
 
 # Split into disjoint train / held-out (deterministic, seed 42)
 uv run python scripts/split_corpus.py
 
-# → data/pubmed_train.jsonl    (45k abstracts)
-# → data/pubmed_heldout.jsonl  ( 5k abstracts — never used for training)
+→ data/pubmed_train.jsonl    (45k abstracts)
+→ data/pubmed_heldout.jsonl  ( 5k abstracts — never used for training)
 
 ### Step 2 — Train the tokenizers
 uv run python scripts\train_medical_tokenizer.py --corpus data\pubmed_train.jsonl --out artifacts\medical-bpe-pubmed\tokenizer.json
