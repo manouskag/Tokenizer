@@ -4,7 +4,7 @@
 50k PubMed abstracts from HuggingFace Hub (streams Parquet, ~180 MB)
 uv run python scripts\download_pubmed_sample.py --max-docs 50000
 
-# Split into disjoint train / held-out (deterministic, seed 42)
+### Split into disjoint train / held-out (deterministic, seed 42)
 uv run python scripts/split_corpus.py
 
 → data/pubmed_train.jsonl    (45k abstracts)
